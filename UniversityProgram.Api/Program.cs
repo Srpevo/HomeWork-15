@@ -47,12 +47,6 @@ builder.Services.AddDbContext<StudentDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Sql")));
 
 builder.Services.AddValidatorsFromAssemblyContaining<LaptopAddModelValidator>(ServiceLifetime.Transient);
-builder.Services.AddValidatorsFromAssemblyContaining<CpuAddModelValidator>(ServiceLifetime.Transient);
-builder.Services.AddValidatorsFromAssemblyContaining<CourseAddModelValidator>(ServiceLifetime.Transient);
-builder.Services.AddValidatorsFromAssemblyContaining<LibraryAddModelValidator>(ServiceLifetime.Transient);
-builder.Services.AddValidatorsFromAssemblyContaining<StudentAddModelValidator>(ServiceLifetime.Transient);
-builder.Services.AddValidatorsFromAssemblyContaining<UniversityAddModelValidator>(ServiceLifetime.Transient);
-builder.Services.AddValidatorsFromAssemblyContaining<AddressAddModelValidator>(ServiceLifetime.Transient); 
 
 var app = builder.Build();
 
