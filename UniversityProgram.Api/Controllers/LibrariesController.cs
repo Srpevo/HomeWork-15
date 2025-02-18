@@ -1,8 +1,8 @@
 ﻿using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
-using UniversityProgram.Api.Models.LibraryModels.AddModels;
-using UniversityProgram.Api.Models.UpdateModels.LibraryModels;
-using UniversityProgram.Api.Services.LibrariesService.Abstract;
+using UniversityProgram.BLL.Models.LibraryModels.AddModels;
+using UniversityProgram.BLL.Models.LibraryModels.UpdateModels;
+using UniversityProgram.BLL.Services.LibrariesService.Abstract;
 
 namespace UniversityProgram.Api.Controllers
 {

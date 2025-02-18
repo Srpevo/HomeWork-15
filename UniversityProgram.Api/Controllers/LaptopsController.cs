@@ -1,9 +1,8 @@
 ﻿using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
-using UniversityProgram.Api.Models.CpuModels.AddModels;
-using UniversityProgram.Api.Models.LaptopModels.AddModels;
-using UniversityProgram.Api.Models.LaptopModels.UpdateModels;
-using UniversityProgram.Api.Services.LaptopsService.Abstract;
+using UniversityProgram.BLL.Models.LaptopModels.AddModels;
+using UniversityProgram.BLL.Models.LaptopModels.UpdateModels;
+using UniversityProgram.BLL.Services.LaptopsService.Abstract;
 
 namespace UniversityProgram.Api.Controllers
 {

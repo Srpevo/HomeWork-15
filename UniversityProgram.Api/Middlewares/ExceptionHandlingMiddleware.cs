@@ -1,4 +1,4 @@
-﻿using UniversityProgram.Api.Exceptions.HttpException;
+﻿using UniversityProgram.BLL.Exceptions.HttpException;
 
 namespace UniversityProgram.Api.Middlewares
 {

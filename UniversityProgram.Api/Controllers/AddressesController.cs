@@ -1,8 +1,8 @@
 ﻿using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
-using UniversityProgram.Api.Models.AddressModels.AddModels;
-using UniversityProgram.Api.Models.AddressModels.UpdateModels;
-using UniversityProgram.Api.Services.AddressService.Abstract;
+using UniversityProgram.BLL.Models.AddressModels.AddModels;
+using UniversityProgram.BLL.Models.AddressModels.UpdateModels;
+using UniversityProgram.BLL.Services.AddressService.Abstract;
 
 namespace UniversityProgram.Api.Controllers
 {
