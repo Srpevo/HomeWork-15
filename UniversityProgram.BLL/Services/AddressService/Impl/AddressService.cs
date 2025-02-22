@@ -22,7 +22,7 @@ namespace UniversityProgram.BLL.Services.AddressService.Impl
             _mapper = mapper;
         }
 
-        public async Task AddAsync(AddressAddModel model, IValidator<AddressAddModel> validator, CancellationToken token)
+        public async Task AddAsync(AddressAddModel model, IValidator<AddressAddModel> validator, CancellationToken token = default)
         {
             
             ObjectValidator.ThrowIfInvalid(validator.Validate(model));
@@ -30,7 +30,7 @@ namespace UniversityProgram.BLL.Services.AddressService.Impl
             await _uow.Save(token);
         }
 
-        public async Task DeleteAsync(int id, CancellationToken token)
+        public async Task DeleteAsync(int id, CancellationToken token = default)
         {
             var address = await _uow.AddressRepository.GetByIdAsync(id, token);
             ObjectValidator.ThrowIfNull(address);
@@ -38,20 +38,20 @@ namespace UniversityProgram.BLL.Services.AddressService.Impl
             await _uow.Save(token);
         }
 
-        public async Task<IEnumerable<AddressModel>> GetAllAsync(CancellationToken token)
+        public async Task<IEnumerable<AddressModel>> GetAllAsync(CancellationToken token = default)
         {
             var addresses = await _uow.AddressRepository.GetAllAsync(token);
             return addresses.Select(e => _mapper.Map<AddressModel>(e));
         }
 
-        public async Task<AddressModel> GetByIdAsync(int id, CancellationToken token)
+        public async Task<AddressModel> GetByIdAsync(int id, CancellationToken token = default)
         {
             var address = await _uow.AddressRepository.GetByIdAsync(id, token);
             ObjectValidator.ThrowIfNull(address);
             return _mapper.Map<AddressModel>(address);
         }
 
-        public async Task UpdateAsync(int id, AddressUpdateModel model, CancellationToken token)
+        public async Task UpdateAsync(int id, AddressUpdateModel model, CancellationToken token = default)
         {
             var address = await _uow.AddressRepository.GetByIdAsync(id, token);
             ObjectValidator.ThrowIfNull(address);
