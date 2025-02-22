@@ -2,9 +2,9 @@
 using UniversityProgram.BLL.Models.AddressModels.AddModels;
 using UniversityProgram.BLL.Models.AddressModels.UpdateModels;
 using UniversityProgram.BLL.Models.AddressModels.ViewModels;
-using UniversityProgram.Data.Entities;
+using UniversityProgram.Domain.Entities;
 
-namespace UniversityProgram.BLL.Map
+namespace UniversityProgram.BLL.Profiles
 {
     public class AddressProfile : Profile
     {

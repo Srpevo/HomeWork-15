@@ -1,17 +1,14 @@
 ﻿using AutoMapper;
 using FluentValidation;
-using Microsoft.EntityFrameworkCore;
-using System.Net;
-using UniversityProgram.BLL.Map;
 using UniversityProgram.BLL.Models.StudentModels.AddModels;
 using UniversityProgram.BLL.Models.StudentModels.UpdateModels;
 using UniversityProgram.BLL.Models.StudentModels.ViewModels;
+using UniversityProgram.BLL.Profiles;
 using UniversityProgram.BLL.Services.CourseBankService.Impl;
 using UniversityProgram.BLL.Services.StudentsService.Abstract;
 using UniversityProgram.BLL.Validators.ObjectValidator;
-using UniversityProgram.Data;
-using UniversityProgram.Data.Entities;
-using UniversityProgram.Data.Repositories.UnitOfWork.Abstract;
+using UniversityProgram.Domain.BaseRepositories;
+using UniversityProgram.Domain.Entities;
 
 namespace UniversityProgram.BLL.Services.StudentsService.Impl
 {

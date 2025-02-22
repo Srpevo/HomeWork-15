@@ -1,9 +1,9 @@
-﻿using System.Runtime.CompilerServices;
-using UniversityProgram.BLL.Models.LibraryModels.AddModels;
+﻿using UniversityProgram.BLL.Models.LibraryModels.AddModels;
 using UniversityProgram.BLL.Models.LibraryModels.ViewModels;
-using UniversityProgram.Data.Entities;
+using UniversityProgram.BLL.Profiles;
+using UniversityProgram.Domain.Entities;
 
-namespace UniversityProgram.BLL.Map
+namespace UniversityProgram.BLL.Profiles
 {
     public static class LibraryMap
     {

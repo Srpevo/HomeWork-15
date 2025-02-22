@@ -1,9 +1,10 @@
-﻿using UniversityProgram.BLL.Models.CpuModels.ViewModels;
+﻿
+using UniversityProgram.BLL.Models.CpuModels.ViewModels;
 using UniversityProgram.BLL.Models.LaptopModels.AddModels;
 using UniversityProgram.BLL.Models.LaptopModels.ViewModels;
-using UniversityProgram.Data.Entities;
+using UniversityProgram.Domain.Entities;
 
-namespace UniversityProgram.BLL.Map
+namespace UniversityProgram.BLL.Profiles
 {
     public static class LaptopMap
     {

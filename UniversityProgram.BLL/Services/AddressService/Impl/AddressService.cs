@@ -1,15 +1,12 @@
 ﻿using AutoMapper;
 using FluentValidation;
-using Microsoft.EntityFrameworkCore;
-using UniversityProgram.BLL.Map;
 using UniversityProgram.BLL.Models.AddressModels.AddModels;
 using UniversityProgram.BLL.Models.AddressModels.UpdateModels;
 using UniversityProgram.BLL.Models.AddressModels.ViewModels;
 using UniversityProgram.BLL.Services.AddressService.Abstract;
 using UniversityProgram.BLL.Validators.ObjectValidator;
-using UniversityProgram.Data;
-using UniversityProgram.Data.Entities;
-using UniversityProgram.Data.Repositories.UnitOfWork.Abstract;
+using UniversityProgram.Domain.BaseRepositories;
+using UniversityProgram.Domain.Entities;
 
 namespace UniversityProgram.BLL.Services.AddressService.Impl
 {

@@ -2,7 +2,7 @@
 using UniversityProgram.BLL.Models.LaptopModels.AddModels;
 using UniversityProgram.BLL.Models.LaptopModels.UpdateModels;
 using UniversityProgram.BLL.Models.LaptopModels.ViewModels;
-using UniversityProgram.Data.Entities;
+using UniversityProgram.Domain.Entities;
 
 namespace UniversityProgram.BLL.Profiles
 {

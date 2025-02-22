@@ -2,7 +2,7 @@
 using UniversityProgram.BLL.Models.LibraryModels.AddModels;
 using UniversityProgram.BLL.Models.LibraryModels.UpdateModels;
 using UniversityProgram.BLL.Models.LibraryModels.ViewModels;
-using UniversityProgram.Data.Entities;
+using UniversityProgram.Domain.Entities;
 
 namespace UniversityProgram.BLL.Profiles
 {

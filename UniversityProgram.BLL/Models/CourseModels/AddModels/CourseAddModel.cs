@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using UniversityProgram.Data.Entities;
+using UniversityProgram.Domain.Entities;
 
 namespace UniversityProgram.BLL.Models.CourseModels.AddModels
 {

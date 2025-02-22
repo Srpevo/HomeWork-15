@@ -1,8 +1,9 @@
 ﻿using UniversityProgram.BLL.Models.UniversityModels.AddModels;
 using UniversityProgram.BLL.Models.UniversityModels.ViewModels;
-using UniversityProgram.Data.Entities;
+using UniversityProgram.BLL.Profiles;
+using UniversityProgram.Domain.Entities;
 
-namespace UniversityProgram.BLL.Map
+namespace UniversityProgram.BLL.Profiles
 {
     public static class UniversityMap
     {

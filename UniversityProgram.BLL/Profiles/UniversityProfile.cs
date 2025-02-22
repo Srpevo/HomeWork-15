@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using UniversityProgram.BLL.Models.UniversityModels.AddModels;
 using UniversityProgram.BLL.Models.UniversityModels.UpdateModels;
 using UniversityProgram.BLL.Models.UniversityModels.ViewModels;
-using UniversityProgram.Data.Entities;
+using UniversityProgram.Domain.Entities;
 
 namespace UniversityProgram.BLL.Profiles
 {

@@ -1,8 +1,9 @@
 ﻿using UniversityProgram.BLL.Models.AddressModels.AddModels;
 using UniversityProgram.BLL.Models.AddressModels.ViewModels;
-using UniversityProgram.Data.Entities;
+using UniversityProgram.Domain.Entities;
 
-namespace UniversityProgram.BLL.Map
+
+namespace UniversityProgram.BLL.Profiles
 {
     public static class AddressMap
     {

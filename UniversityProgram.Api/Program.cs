@@ -5,8 +5,9 @@ using UniversityProgram.Api.Middlewares;
 using UniversityProgram.BLL.Profiles;
 using UniversityProgram.BLL.Validators.LaptopValidators;
 using UniversityProgram.Data;
-using UniversityProgram.Data.Repositories.UnitOfWork.Abstract;
-using UniversityProgram.Data.Repositories.UnitOfWork.Impl;
+using UniversityProgram.Data.Repositories.UnitOfWork;
+using UniversityProgram.Domain.BaseRepositories;
+
 
 var builder = WebApplication.CreateBuilder(args);
 

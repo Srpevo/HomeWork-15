@@ -1,12 +1,12 @@
-﻿
-using UniversityProgram.BLL.Models.CourseModels.ViewModels;
+﻿using UniversityProgram.BLL.Models.CourseModels.ViewModels;
 using UniversityProgram.BLL.Models.CpuModels.ViewModels;
 using UniversityProgram.BLL.Models.LaptopModels.ViewModels;
 using UniversityProgram.BLL.Models.StudentModels.AddModels;
 using UniversityProgram.BLL.Models.StudentModels.ViewModels;
-using UniversityProgram.Data.Entities;
+using UniversityProgram.BLL.Profiles;
+using UniversityProgram.Domain.Entities;
 
-namespace UniversityProgram.BLL.Map
+namespace UniversityProgram.BLL.Profiles
 {
     public static class StudentMap
     {

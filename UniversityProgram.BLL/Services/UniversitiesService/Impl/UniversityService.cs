@@ -1,16 +1,12 @@
 ﻿using AutoMapper;
 using FluentValidation;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
-using UniversityProgram.BLL.Map;
 using UniversityProgram.BLL.Models.UniversityModels.AddModels;
 using UniversityProgram.BLL.Models.UniversityModels.UpdateModels;
 using UniversityProgram.BLL.Models.UniversityModels.ViewModels;
 using UniversityProgram.BLL.Services.UniversitiesService.Abstract;
 using UniversityProgram.BLL.Validators.ObjectValidator;
-using UniversityProgram.Data;
-using UniversityProgram.Data.Entities;
-using UniversityProgram.Data.Repositories.UnitOfWork.Abstract;
+using UniversityProgram.Domain.BaseRepositories;
+using UniversityProgram.Domain.Entities;
 
 namespace UniversityProgram.BLL.Services.UniversitiesService.Impl
 {
