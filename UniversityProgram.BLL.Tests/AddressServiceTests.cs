@@ -1,12 +1,6 @@
 ﻿using AutoMapper;
-using Castle.Components.DictionaryAdapter.Xml;
 using FluentValidation;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UniversityProgram.BLL.Models.AddressModels.AddModels;
 using UniversityProgram.BLL.Models.AddressModels.ViewModels;
 using UniversityProgram.BLL.Services.AddressService.Abstract;

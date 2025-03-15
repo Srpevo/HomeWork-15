@@ -29,6 +29,17 @@ namespace UniversityProgram.Api.Extensions.ServiceExtensions
             services.AddScoped<IUniversityService, UniversityService>();
             services.AddScoped<ICpuService, CpuService>();
             services.AddScoped<IAddressService, AddressService>();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowSpecificOrigin", builder =>
+                {
+
+                    builder.WithOrigins("...")
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();
+
+                });
+            });
         }
     }
 }
