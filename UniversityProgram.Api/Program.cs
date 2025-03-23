@@ -18,17 +18,19 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddProjectServicesScoped();
-builder.Services.AddAutoMapper(typeof(LaptopProfile));
-builder.Services.AddValidatorsFromAssemblyContaining<LaptopAddModelValidator>(ServiceLifetime.Transient);
-
 
 builder.Services.AddDbContext<StudentDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Sql")));
 
-builder.Services.AddScoped<IUnitOfWork,  UnitOfWork>();
+
 
 
 var app = builder.Build();
+
+app.UseCors(policy =>
+    policy.AllowAnyOrigin()
+    .AllowAnyMethod()
+);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

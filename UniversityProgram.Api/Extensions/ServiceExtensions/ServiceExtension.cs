@@ -1,4 +1,7 @@
-﻿using UniversityProgram.BLL.Services.AddressService.Abstract;
+﻿using FluentValidation;
+using Microsoft.EntityFrameworkCore;
+using UniversityProgram.BLL.Profiles;
+using UniversityProgram.BLL.Services.AddressService.Abstract;
 using UniversityProgram.BLL.Services.AddressService.Impl;
 using UniversityProgram.BLL.Services.CourseBankService.Abstract;
 using UniversityProgram.BLL.Services.CourseBankService.Impl;
@@ -14,6 +17,10 @@ using UniversityProgram.BLL.Services.StudentsService.Abstract;
 using UniversityProgram.BLL.Services.StudentsService.Impl;
 using UniversityProgram.BLL.Services.UniversitiesService.Abstract;
 using UniversityProgram.BLL.Services.UniversitiesService.Impl;
+using UniversityProgram.BLL.Validators.LaptopValidators;
+using UniversityProgram.Data.Repositories.UnitOfWork;
+using UniversityProgram.Domain.BaseRepositories;
+
 
 namespace UniversityProgram.Api.Extensions.ServiceExtensions
 {
@@ -29,17 +36,9 @@ namespace UniversityProgram.Api.Extensions.ServiceExtensions
             services.AddScoped<IUniversityService, UniversityService>();
             services.AddScoped<ICpuService, CpuService>();
             services.AddScoped<IAddressService, AddressService>();
-            services.AddCors(options =>
-            {
-                options.AddPolicy("AllowSpecificOrigin", builder =>
-                {
-
-                    builder.WithOrigins("...")
-                    .AllowAnyMethod()
-                    .AllowAnyHeader();
-
-                });
-            });
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddAutoMapper(typeof(LaptopProfile));
+            services.AddValidatorsFromAssemblyContaining<LaptopAddModelValidator>(ServiceLifetime.Transient);
         }
     }
 }
