@@ -1,4 +1,4 @@
-﻿namespace UniversityProgram.UI.Models
+﻿namespace UniversityProgram.UI.Models.StudentModels
 {
     public class StudentModel
     {

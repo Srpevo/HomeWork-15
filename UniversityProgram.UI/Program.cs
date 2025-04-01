@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using UniversityProgram.UI;
 using UniversityProgram.UI.Apis.StudentApi.Abstarct;
 using UniversityProgram.UI.Apis.StudentApi.Impl;
+using MudBlazor.Services;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -14,6 +15,9 @@ builder.Services.AddHttpClient<IStudentApi, StudentApi>(client =>
 {
     client.BaseAddress = new Uri("http://localhost:5260");
 });
+
+
+builder.Services.AddMudServices();
 
 
 await builder.Build().RunAsync();

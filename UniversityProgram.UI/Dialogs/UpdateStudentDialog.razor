@@ -1,0 +1,17 @@
+﻿@inject IStudentApi StudentApi
+
+<MudDialog>
+    <TitleContent>
+        <MudText Typo="Typo.h6">Add Student</MudText>
+    </TitleContent>
+    <DialogContent>
+        <MudTextField @bind-Value="Student.Name" Label="New Name" MaxLength="50" />
+        <MudTextField @bind-Value="Student.Email" Label="New Email" />
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel" Color="Color.Secondary">Cancel</MudButton>
+        <MudButton OnClick="Update" Color="Color.Primary">Update</MudButton>
+    </DialogActions>
+</MudDialog>
+
+

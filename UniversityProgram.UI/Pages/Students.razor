@@ -1,41 +1,35 @@
 ﻿@page "/students"
 @inject IStudentApi StudentApi
-
-<h3>Students</h3>
+@inject IDialogService DialogService
+@inject ISnackbar snackbar
 
 <PageTitle>Students</PageTitle>
 
-<div>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Money</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var student in students)
-            {
-                <tr>
-                    <td>@student.Id</td>
-                    <td>@student.Name</td>
-                    <td>@student.Email</td>
-                    <td>@student.Money</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-</div>
+<MudDataGrid Items="@_students">
+    <Columns>
+        <PropertyColumn Property="x => x.Id"/>
+        <PropertyColumn Property="x => x.Name" />
+        <PropertyColumn Property="x => x.Email" />
+        <PropertyColumn Property="x => x.Money" />
 
-@code {
+        <TemplateColumn Title="Actions">
+            <CellTemplate>
+                <MudButtonGroup Size="Size.Medium" Variant="Variant.Filled">
+                    <MudButton OnClick="() => EditStudent(context.Item.Id)">
+                        <MudIcon Icon="@Icons.Material.Filled.Edit" />
+                    </MudButton>
+                    <MudButton OnClick="() => DeleteStudentAsync(context.Item.Id)">
+                        <MudIcon Icon="@Icons.Material.Filled.Delete" />
+                    </MudButton>
+                </MudButtonGroup>
+            </CellTemplate>
+        </TemplateColumn>
+    </Columns>
+</MudDataGrid>
 
-    private IEnumerable<StudentModel> students = new List<StudentModel>();
+<MudButton Variant="@Variant.Filled" Color="@Color.Transparent" OnClick="AddStudent">
+    <MudIcon Icon="@Icons.Material.Filled.Add"/>
+</MudButton>
 
-    protected override async Task OnInitializedAsync()
-    {
-        students = await StudentApi.GetAll();
-    }
-}
+
 

@@ -39,6 +39,7 @@ namespace UniversityProgram.Api.Extensions.ServiceExtensions
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddAutoMapper(typeof(LaptopProfile));
             services.AddValidatorsFromAssemblyContaining<LaptopAddModelValidator>(ServiceLifetime.Transient);
+            services.AddSignalR();
         }
     }
 }

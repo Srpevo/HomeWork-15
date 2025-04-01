@@ -18,8 +18,10 @@ namespace UniversityProgram.BLL.Profiles
             };
         }
 
-        public static Address Map(this AddressAddModel model)
+        public static Address Map(this AddressAddModel? model)
         {
+            if (model is null) return null!;
+
             return new Address
             {
                 City = model.City,

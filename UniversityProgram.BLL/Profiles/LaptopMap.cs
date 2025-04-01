@@ -18,12 +18,14 @@ namespace UniversityProgram.BLL.Profiles
             };
         }
 
-        public static Laptop Map(this LaptopAddModel model)
+        public static Laptop Map(this LaptopAddModel? model)
         {
+            if (model is null) return null!;
+
             return new Laptop
             {
                 Name = model.Name,
-                Cpu = model.Cpu!.Map()
+                Cpu = model.Cpu.Map() ?? null!
             };
         }
 
