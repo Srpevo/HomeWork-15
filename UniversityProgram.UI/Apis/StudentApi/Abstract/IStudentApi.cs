@@ -1,7 +1,6 @@
-﻿
-using UniversityProgram.UI.Models.StudentModels;
+﻿using UniversityProgram.UI.Models.StudentModels;
 
-namespace UniversityProgram.UI.Apis.StudentApi.Abstarct
+namespace UniversityProgram.UI.Apis.StudentApi.Abstract
 {
     public interface IStudentApi
     {

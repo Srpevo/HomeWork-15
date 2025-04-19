@@ -1,5 +1,5 @@
 ﻿using System.Net.Http.Json;
-using UniversityProgram.UI.Apis.StudentApi.Abstarct;
+using UniversityProgram.UI.Apis.StudentApi.Abstract;
 using UniversityProgram.UI.Models.StudentModels;
 
 namespace UniversityProgram.UI.Apis.StudentApi.Impl

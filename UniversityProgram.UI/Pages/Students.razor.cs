@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.SignalR.Client;
 using MudBlazor;
-using System.Threading.Tasks;
 using UniversityProgram.UI.Dialogs;
 using UniversityProgram.UI.Models.StudentModels;
 

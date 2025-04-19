@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using UniversityProgram.BLL.Models.StudentModels.AddModels;
 using UniversityProgram.BLL.Models.StudentModels.UpdateModels;
@@ -7,6 +8,7 @@ using UniversityProgram.BLL.Services.StudentsService.Abstract;
 
 namespace UniversityProgram.Api.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class StudentsController : ControllerBase

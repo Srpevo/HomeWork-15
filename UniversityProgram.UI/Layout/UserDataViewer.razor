@@ -1,0 +1,31 @@
+﻿<style>
+    .user_img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+</style>
+
+
+<img class="user_img" src="@_imgSrc" alt="User Photo" />
+
+@code {
+    [Inject] AuthenticationStateProvider authenticationStateProvider { get; set; } = default!;
+    private string? _imgSrc;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var state = await authenticationStateProvider.GetAuthenticationStateAsync();
+        var pictureClaim = state.User.Claims.FirstOrDefault(c => c.Type == "picture");
+
+        if (pictureClaim != null)
+        {
+            _imgSrc = pictureClaim.Value;
+        }
+        else
+        {
+            _imgSrc = "https://cdn-icons-png.flaticon.com/512/8792/8792047.png";
+        }
+    }
+}

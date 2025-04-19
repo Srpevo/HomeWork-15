@@ -1,35 +1,42 @@
 ﻿@page "/students"
+@using UniversityProgram.UI.Apis.StudentApi.Abstract
 @inject IStudentApi StudentApi
 @inject IDialogService DialogService
 @inject ISnackbar snackbar
 
 <PageTitle>Students</PageTitle>
+<AuthorizeView>
+    <NotAuthorized>
 
-<MudDataGrid Items="@_students">
-    <Columns>
-        <PropertyColumn Property="x => x.Id"/>
-        <PropertyColumn Property="x => x.Name" />
-        <PropertyColumn Property="x => x.Email" />
-        <PropertyColumn Property="x => x.Money" />
+        <a>You not Authorized</a>
 
-        <TemplateColumn Title="Actions">
-            <CellTemplate>
-                <MudButtonGroup Size="Size.Medium" Variant="Variant.Filled">
-                    <MudButton OnClick="() => EditStudent(context.Item.Id)">
-                        <MudIcon Icon="@Icons.Material.Filled.Edit" />
-                    </MudButton>
-                    <MudButton OnClick="() => DeleteStudentAsync(context.Item.Id)">
-                        <MudIcon Icon="@Icons.Material.Filled.Delete" />
-                    </MudButton>
-                </MudButtonGroup>
-            </CellTemplate>
-        </TemplateColumn>
-    </Columns>
-</MudDataGrid>
+    </NotAuthorized>
 
-<MudButton Variant="@Variant.Filled" Color="@Color.Transparent" OnClick="AddStudent">
-    <MudIcon Icon="@Icons.Material.Filled.Add"/>
-</MudButton>
+    <Authorized Context="authContext">
+        <MudDataGrid Items="@_students">
+            <Columns>
+                <PropertyColumn Property="x => x.Id" />
+                <PropertyColumn Property="x => x.Name" />
+                <PropertyColumn Property="x => x.Email" />
+                <PropertyColumn Property="x => x.Money" />
 
+                <TemplateColumn Title="Actions">
+                    <CellTemplate>
+                        <MudButtonGroup Size="Size.Medium" Variant="Variant.Filled">
+                            <MudButton OnClick="() => EditStudent(context.Item.Id)">
+                                <MudIcon Icon="@Icons.Material.Filled.Edit" />
+                            </MudButton>
+                            <MudButton OnClick="() => DeleteStudentAsync(context.Item.Id)">
+                                <MudIcon Icon="@Icons.Material.Filled.Delete" />
+                            </MudButton>
+                        </MudButtonGroup>
+                    </CellTemplate>
+                </TemplateColumn>
+            </Columns>
+        </MudDataGrid>
 
-
+        <MudButton Variant="@Variant.Filled" Color="@Color.Transparent" OnClick="AddStudent">
+            <MudIcon Icon="@Icons.Material.Filled.Add" />
+        </MudButton>
+    </Authorized>
+</AuthorizeView>
